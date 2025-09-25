@@ -7,6 +7,16 @@
 
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
+  <script>
+    function downloadFile() {
+      const link = document.createElement('a');
+      link.href = 'example_of_dispute_or_proposition.pdf';
+      link.download = 'example_of_dispute_or_proposition.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
 </head>
 <body>
 
@@ -153,6 +163,22 @@
           <p>Встановлює основні принципи провадження господарської діяльності з перепродажу електричної енергії (трейдерської діяльності)</p>
           <a href="https://zakon.rada.gov.ua/laws/show/v1468874-17#Text" class="button button-outline">Читати</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="download-section">
+    <div class="container">
+      <div class="download-card">
+        <h3>Зразок заяви</h3>
+        <p>Завантажте зразок заяви для подання скарги або пропозиції щодо роботи нашої компанії</p>
+        <button class="download-button" onclick="downloadFile()">
+          <span>Завантажити заяву</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15L8 11H10.5V7H13.5V11H16L12 15Z" fill="currentColor"/>
+            <path d="M19 19H5V17H19V19Z" fill="currentColor"/>
+          </svg>
+        </button>
       </div>
     </div>
   </section>
