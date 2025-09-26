@@ -16,6 +16,15 @@
       link.click();
       document.body.removeChild(link);
     }
+    
+    function downloadDisputeFile() {
+      const link = document.createElement('a');
+      link.href = 'Порядок вирішення спорів.pdf';
+      link.download = 'Порядок вирішення спорів.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   </script>
 </head>
 <body>
@@ -169,16 +178,30 @@
 
   <section class="download-section">
     <div class="container">
-      <div class="download-card">
-        <h3>Зразок заяви</h3>
-        <p>Завантажте зразок заяви для подання скарги або пропозиції щодо роботи нашої компанії</p>
-        <button class="download-button" onclick="downloadFile()">
-          <span>Завантажити заяву</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 15L8 11H10.5V7H13.5V11H16L12 15Z" fill="currentColor"/>
-            <path d="M19 19H5V17H19V19Z" fill="currentColor"/>
-          </svg>
-        </button>
+      <div class="download-cards">
+        <div class="download-card">
+          <h3>Зразок заяви</h3>
+          <p>Завантажте зразок заяви для подання скарги або пропозиції щодо роботи нашої компанії</p>
+          <button class="download-button" onclick="downloadFile()">
+            <span>Завантажити заяву</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 15L8 11H10.5V7H13.5V11H16L12 15Z" fill="currentColor"/>
+              <path d="M19 19H5V17H19V19Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="download-card">
+          <h3>Порядок вирішення спорів</h3>
+          <p>Завантажте документ, що визначає порядок вирішення спорів у сфері електроенергетики</p>
+          <button class="download-button" onclick="downloadDisputeFile()">
+            <span>Завантажити документ</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 15L8 11H10.5V7H13.5V11H16L12 15Z" fill="currentColor"/>
+              <path d="M19 19H5V17H19V19Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </section>
